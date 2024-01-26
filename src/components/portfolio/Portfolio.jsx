@@ -57,13 +57,12 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        <div className="item">
-          <img
-            src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAU"
-            alt=""
-          />
-          <h3>Banking App</h3>
-        </div>
+        {data.map((e) => (
+          <div className="item">
+            <img src={e.img} alt="Not Found" />
+            <h3>{e.title}</h3>
+          </div>
+        ))}
       </div>
     </div>
   );
